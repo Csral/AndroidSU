@@ -1,3 +1,9 @@
+---
+layout: page
+title: "AndroidSU"
+permalink: /
+---
+
 # AndroidSU
 
 *This web-page is dedicated to provide as much knowledge as possible about root. Feel free to use the resources provided here.*
