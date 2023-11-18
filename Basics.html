@@ -10,16 +10,33 @@ permalink: "/basic"
       What Is Root?
     </title>
     <script>
-      function run() {
-        console.log("Test Success");
+      function init() {
+        console.log("Loaded the site.");
       };
-
-      function test() {
-        console.log("Successs");
-      }
     </script>
   </head>
-  <body onload="run()">
-    <button onclick="test()">test</button>
+  <body onload="init()">
+    <h1>Welcome, Let's get into basics</h1>
+    <b>This pages will teach you the basics of rooting. This is skip-able part.</b>
+    <br>
+    <div>
+      <p>
+        <h2>Root... The origin</h2>
+        <b><i>It all began a dark night...</i></b>
+        Just kidding, root is the word for user id 0, in typically UNIX (However Android is not on UNIX) systems, users are identified via user id.<br>
+        This user id is unique to each user, Android being built with Linux Kernel (Which is based of UNIX (kind of)) is no exception to this general rule.<br>
+        <br>
+        <b>So what makes user 0 special?</b>
+        <br>The answer lies in the capability of this user. User 0 is refered to as SuperUser (or) Root. <br>
+        Fun fact: su command doesn't stand for Superuser but for Switch User.<br>
+        The root user can do almost anything, from creating a new user to deleting an existing one, From accessing anything on system to removing the whole system itself.<br>
+        This user is like a god to the system, once this user prompts anything THE SYSTEM WILL DO IT. NO. EXCEPTIONS.<br>
+        Since he is soo strong, the mobile devices usually suggest against accessing this user. <a href="https://csral.github.io/AndroidSU/against-root">Read Why here.</a>
+        <br><hr>
+        <h3>Rooting, what and why?</h3>
+        This questions was answered earlier.. Kind of. Root user is inaccessible in Android by default and Rooting is a process of modifiying the system so as to give us access to this particular user.<br>
+        To answer why is rather easy than how which will be answered next.
+      </p>
+    </div>
   </body>
 </html>
