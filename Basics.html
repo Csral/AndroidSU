@@ -9,10 +9,39 @@ permalink: "/basic"
     <title>
       What Is Root?
     </title>
-    <script>
-      function init() {
-        console.log("Loaded the site.");
+
+    <!-- Css !-->
+
+    <style>
+      .center {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .darkmode {
+        background-color: #000000;
+        color: #FFFFFF;
+      }
+
+      .darkmode > div a {
+        color: #39FF14;
+      }
+
+      .darkmode > div a:hover {
+        color: #FF1144;
+      }
+      
+      div > a:hover {
+        color: #FF5F1F;
       };
+      
+    </style>
+
+    <!-- Js !-->
+    
+    <script>
 
       function hideshow(elemid) {
         let element = document.getElementById(elemid);
@@ -21,8 +50,54 @@ permalink: "/basic"
         else element.style.display = "none";
 
       }
+
+      let setCookie = (id, value, doesExpire, expires=0, path) => {
+        console.log("Set Cookie Called.");
+        if (doesExpire === 0) {
+          console.log("Cookie doesn't expire.");
+          document.cookie = `${id}=${value};path=${path}`
+        } else if (doesExpire === 1) {
+          console.log("Cookie expires in " + expires + " Days");
+          const date = new Date();
+          date.setTime(date.getTime() + (expires*24*60*60*1000));
+          let timeforexpire = "expires="+ date.toUTCString();
+          document.cookie = `${id}=${value};${timeforexpire};path=${path}`
+        } else {
+          console.log(`Invalid parameter doesExpire. Recived: ${doesExpire}`);
+          return -1;
+        };
+
+        return 0;
+        
+      };
+
+      let getCookie = (id) => {
+        let name = id + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let x = decodedCookie.split(';');
+        for(let i = 0; i <x.length; i++) {
+          let y = x[i];
+          while (y.charAt(0) == ' ') {
+            y = y.substring(1);
+          }
+          if (y.indexOf(name) == 0) {
+          return y.substring(name.length, y.length);
+          }
+        }
+        return "";
+      }
+      
+      let darkmode = () => {
+        document.body.classList.toggle("darkmode");
+      };
+
+      let init = () => {
+        console.log("Loaded the site.");
+        if (getCookie("mode") === "dark") darkmode();
+      };
       
     </script>
+    
   </head>
   <body onload="init()">
     <h1>Welcome, Let's get into basics</h1>
