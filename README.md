@@ -15,4 +15,4 @@ General things to be kept in mind:
 2. Do not completely trust any forks (unless mentioned here) (or) other pages.
 3. Keep confidence and trust the process. Rooting is a great thing!
 
-* [Click Here For Basics](csral.github.com/AndroidSU/basic)
+* [Click Here For Basics](csral.github.io/AndroidSU/basic)
