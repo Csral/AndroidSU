@@ -93,7 +93,7 @@ permalink: "/basic"
 
       let init = () => {
         console.log("Loaded the site.");
-        if (getCookie("mode") === "dark") darkmode();
+        if (getCookie("mode") === "dark") document.body.classList.toggle("darkmode");
       };
       
     </script>
