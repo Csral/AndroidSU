@@ -85,14 +85,14 @@ permalink: /
       };
 
       let init = () => {
-        if (getCookie("mode") === "dark") darkmode();
+        if (getCookie("mode") === "dark") document.body.classList.toggle("darkmode");
       };
       
     </script>
     
   </head>
 
-  <body>
+  <body onload="init()">
 
   <h1>AndroidSU</h1>
 
