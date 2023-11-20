@@ -23,7 +23,7 @@ permalink: /
     <script>
       // Js
 
-      let setCookie = (id, value, doesExpire, expires=0, path) => {
+      function setCookie(id, value, doesExpire, expires=0, path) {
         console.log("Set Cookie Called.");
         if (doesExpire === 0) {
           console.log("Cookie doesn't expire.");
@@ -43,13 +43,13 @@ permalink: /
         
       };
       
-      let darkmode = () => {
+      function darkmode() {
         console.log("Appending Cookie.");
         setCookie("mode", "dark", 0, 0, "/");
         document.body.classList.toggle("darkmode");
       };
 
-      let init = () => {
+      function init() {
         // load darkmode if defaulted.
       };
       
