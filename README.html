@@ -22,6 +22,37 @@ permalink: /
     <!-- JS !-->
     <script>
       // Js
+
+      let setCookie = (id, value, doesExpire, expires=0, path) => {
+        console.log("Set Cookie Called.");
+        if (doesExpire === 0) {
+          console.log("Cookie doesn't expire.");
+          document.cookie = `${id}=${value};path=${path}`
+        } else if (doesExpire === 1) {
+          console.log("Cookie expires in " + expires + " Days");
+          const date = new Date();
+          date.setTime(date.getTime() + (expires*24*60*60*1000));
+          let timeforexpire = "expires="+ date.toUTCString();
+          document.cookie = `${id}=${value};${timeforexpire};path=${path}`
+        } else {
+          console.log(`Invalid parameter doesExpire. Recived: ${doesExpire}`);
+          return -1;
+        };
+
+        return 0;
+        
+      };
+      
+      let darkmode = () => {
+        console.log("Appending Cookie.");
+        setCookie("mode", "dark", 0, 0, "/");
+        document.body.classList.toggle("darkmode");
+      };
+
+      let init = () => {
+        // load darkmode if defaulted.
+      };
+      
     </script>
     
   </head>
