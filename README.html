@@ -60,6 +60,22 @@ permalink: /
         return 0;
         
       };
+
+      let getCookie = (id) => {
+        let name = id + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let x = decodedCookie.split(';');
+        for(let i = 0; i <x.length; i++) {
+          let y = x[i];
+          while (y.charAt(0) == ' ') {
+            y = y.substring(1);
+          }
+          if (y.indexOf(name) == 0) {
+          return y.substring(name.length, y.length);
+          }
+        }
+        return "";
+      }
       
       let darkmode = () => {
         console.log("Appending Cookie.");
@@ -68,7 +84,7 @@ permalink: /
       };
 
       let init = () => {
-        // load darkmode if defaulted.
+        if (getCookie("mode") === "dark") darkmode();
       };
       
     </script>
