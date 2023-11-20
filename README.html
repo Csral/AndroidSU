@@ -80,7 +80,7 @@ permalink: /
       let darkmode = () => {
         console.log("Appending Cookie.");
         if (getCookie("mode") === "" || getCookie("mode") === "light") setCookie("mode", "dark", 0, 0, "/");
-        else setCookie("mode", "light", 0, 0, "/");
+        else setCookie("mode", "light", 1, 3650, "/");
         document.body.classList.toggle("darkmode");
       };
 
