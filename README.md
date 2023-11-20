@@ -14,3 +14,5 @@ General things to be kept in mind:
 1. Under no circumstances will the author be liable to any damages caused to your own devices. (You did unlock your bootloader, so it makes no sense to think your device is completely safe)
 2. Do not completely trust any forks (unless mentioned here) (or) other pages.
 3. Keep confidence and trust the process. Rooting is a great thing!
+
+* [Click Here For Basics](csral.github.com/AndroidSU/basic)
