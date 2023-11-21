@@ -30,6 +30,16 @@ permalink: /
       .darkmode > div a:hover {
         color: #FF1144;
       }
+
+      .darkmode > #darkmodebtn {
+        background-color: #808080;
+        color: #FFFFFF;
+      }
+
+      #darkmodebtn {
+        background-color: #CCCCCC;
+        color: #000000;
+      }
       
       div > a:hover {
         color: #FF5F1F;
@@ -82,6 +92,7 @@ permalink: /
         if (getCookie("mode") === "" || getCookie("mode") === "light") setCookie("mode", "dark", 1, 3650, "/");
         else setCookie("mode", "light", 1, 3650, "/");
         document.body.classList.toggle("darkmode");
+        document.getElementById("darkmodebtn").innerHTML = "Light Mode";
       };
 
       let init = () => {
@@ -98,7 +109,7 @@ permalink: /
 
   <div class="center">
 
-    <button onclick="darkmode()">Dark Mode</button>
+    <button onclick="darkmode()" id="darkmodebtn">Dark Mode</button>
     
   </div>
     
