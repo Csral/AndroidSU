@@ -92,11 +92,14 @@ permalink: /
         if (getCookie("mode") === "" || getCookie("mode") === "light") setCookie("mode", "dark", 1, 3650, "/");
         else setCookie("mode", "light", 1, 3650, "/");
         document.body.classList.toggle("darkmode");
-        document.getElementById("darkmodebtn").innerHTML = "Light Mode";
+        document.getElementById("darkmodebtn").innerHTML.toLowerCase() === "dark mode" ? document.getElementById("darkmodebtn").innerHTML = "Light Mode" : document.getElementById("darkmodebtn").innerHTML = "Dark Mode";
       };
 
       let init = () => {
-        if (getCookie("mode") === "dark") document.body.classList.toggle("darkmode");
+        if (getCookie("mode") === "dark") { 
+          document.body.classList.toggle("darkmode");
+          document.getElementById("darkmodebtn").innerHTML = "Light Mode";
+        };
       };
       
     </script>
