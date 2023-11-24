@@ -103,17 +103,6 @@ permalink: "/basic"
         console.log("Loaded the site.");
         if (getCookie("mode") === "dark") document.body.classList.toggle("darkmode");
       };
-
-      let retoggle = (classid) => {
-        // Re-toggler
-        let element = document.getElementsByClassName(classid);
-
-        if (element.style.display === "none") element.style.display = "block";
-        else element.style.display = "none";
-
-        console.log(`Retoggled ${classid}`);
-        return 0;
-      };
       
     </script>
     
@@ -144,8 +133,8 @@ permalink: "/basic"
     <div>
       <h3>Some General Pre-cautions</h3>
       Click on the titles for information.
-      <button class="toggle" onclick="retoggle('oneclickroot')">Why Are One-Click Rooting Apps Not Recommended?</h4>
-      <div class="oneclickroot" style="display: none;">
+      <button class="toggle" onclick="hideshow('oneclickroot')">Why Are One-Click Rooting Apps Not Recommended?</h4>
+      <div id="oneclickroot" style="display: none;">
         Well, let's see. These one click rooting apps are indeed famous (or) rather were they?<br>
         The problem arose when the people figured out that these one click rooting apps desite giving root access in most easy way, They also take too much in return.<br>
         <ul style="list-style-type:disc;">
