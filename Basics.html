@@ -95,6 +95,17 @@ permalink: "/basic"
         console.log("Loaded the site.");
         if (getCookie("mode") === "dark") document.body.classList.toggle("darkmode");
       };
+
+      let retoggle = (classid) => {
+        // Re-toggler
+        let element = document.getElementByClassName(classid);
+
+        if (element.style.display === "none") element.style.display = "block";
+        else element.style.display = "none";
+
+        console.log(`Retoggled ${classid}`);
+        return 0;
+      };
       
     </script>
     
@@ -119,7 +130,23 @@ permalink: "/basic"
         <br><hr>
         <h3>Rooting, what and why?</h3>
         This questions was answered earlier.. Kind of. Root user is inaccessible in Android by default and Rooting is a process of modifiying the system so as to give us access to this particular user.<br>
-        To answer why is rather easy than how which will be answered next.
+        To answer why is rather easy than how which will be answered later on.
+      </p>
+    </div>
+    <div>
+      <h3>Some General Pre-cautions</h3>
+      Click on the titles for information.
+      <h4 class="toggle" onclick="retoggle('oneclickroot')">Why Are One-Click Rooting Apps Not Recommended?</h4>
+      <p class="oneclickroot">
+        Well, let's see. These one click rooting apps are indeed famous (or) rather were they?<br>
+        The problem arose when the people figured out that these one click rooting apps desite giving root access in most easy way, They also take too much in return.<br>
+        <ul style="list-style-type:disc;">
+          <li>These apps were found to install <a href="http://csral.github.io/AndrodSU/spyware">spyware</a> which can be used to spy on you.</li>
+          <li>Being the apps that root, they by default have root access, so these <a href="http://csral.github.io/AndrodSU/spyware">spyware</a> installed cannot be removed easily.</li>
+          <li>They are no longer supported for Android version >= 5, Majorly Because of <a href="http://csral.github.io/AndroidSU/selinux">SeLinux Polices</a></li>
+          <li>These apps abuse the Android Flaws (The security loopholes)</li>
+          <li>Simply binding method of linux is better. (Explained later.)</li>
+        </ul>
       </p>
     </div>
   </body>
