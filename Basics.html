@@ -98,7 +98,7 @@ permalink: "/basic"
 
       let retoggle = (classid) => {
         // Re-toggler
-        let element = document.getElementByClassName(classid);
+        let element = document.getElementsByClassName(classid);
 
         if (element.style.display === "none") element.style.display = "block";
         else element.style.display = "none";
