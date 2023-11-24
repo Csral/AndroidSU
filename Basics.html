@@ -13,6 +13,14 @@ permalink: "/basic"
     <!-- Css !-->
 
     <style>
+
+      .toggle {
+        color: #B026FF;
+        background-color: inherit;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      
       .center {
         margin: auto;
         width: 50%;
@@ -136,8 +144,8 @@ permalink: "/basic"
     <div>
       <h3>Some General Pre-cautions</h3>
       Click on the titles for information.
-      <h4 class="toggle" onclick="retoggle('oneclickroot')" style="color: #B026FF;">Why Are One-Click Rooting Apps Not Recommended?</h4>
-      <p class="oneclickroot" style="display: none;">
+      <button class="toggle" onclick="retoggle('oneclickroot')">Why Are One-Click Rooting Apps Not Recommended?</h4>
+      <div class="oneclickroot" style="display: none;">
         Well, let's see. These one click rooting apps are indeed famous (or) rather were they?<br>
         The problem arose when the people figured out that these one click rooting apps desite giving root access in most easy way, They also take too much in return.<br>
         <ul style="list-style-type:disc;">
@@ -147,7 +155,7 @@ permalink: "/basic"
           <li>These apps abuse the Android Flaws (The security loopholes)</li>
           <li>Simply binding method of linux is better. (Explained later.)</li>
         </ul>
-      </p>
+      </div>
     </div>
   </body>
 </html>
